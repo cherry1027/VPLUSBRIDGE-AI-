@@ -1,40 +1,50 @@
 # VPlusBridge AI
 
-A local-only React + TypeScript research prototype for deterministic legacy Adept/V+ program analysis and virtual modernization evaluation.
+VPlusBridge AI is a polished research prototype for modernizing and verifying illustrative legacy Adept/V+ robot programs.
 
-## Run locally
+**Live demo:** https://vplusbridge-ai.pages.dev/
 
-```bash
-npm install
-npm run dev
-```
+## Features
 
-Build verification:
+### Legacy Modernization Workspace
 
-```bash
-npm run build
-```
+- Editable synthetic Adept/V+ pick-and-place program
+- Deterministic parser for:
+- `.PROGRAM`
+- `.END`
+- `MOVE`
+- `MOVES`
+- `SPEED`
+- `SIGNAL`
+- `DELAY`
+- Source-linked control-flow analysis
+- Dependency and assumption detection
+- Functional and technical documentation
+- Target-neutral pseudocode with explicit TODOs
+- Verification test cases traced to source lines
+- Unsupported syntax warnings
+- Engineer review, copy, and JSON export actions
 
-## Pages
+### Virtual Verification & Evaluation
 
-1. **Legacy Modernization Workspace** (`/`)
-   - Editable illustrative V+ source
-   - Deterministic parsing for `.PROGRAM`, `.END`, `MOVE`, `MOVES`, `SPEED`, `SIGNAL`, and `DELAY`
-   - Source-linked analysis, documentation, target-neutral draft, and tests
-   - Explicit unsupported-syntax and assumption handling
-   - Local engineer review, copy, and JSON export actions
+- Interactive SVG robot workcell
+- Reference and draft sequence playback
+- Run, pause, reset, and trajectory comparison controls
+- Motion-event timeline and live I/O states
+- Verification outcomes and deviation indicators
+- Editable manual versus AI-assisted effort model
+- Automatic time-saved, rework, and quality calculations
+- Recharts effort visualization
+- Failure-pattern explorer and research summary
+- Evaluation result export
 
-2. **Virtual Verification & Evaluation** (`/verification`)
-   - Animated SVG robot workcell
-   - Reference/draft playback, pause, reset, and path comparison
-   - Motion events, I/O states, and verification outcomes
-   - Editable manual vs AI-assisted effort model with Recharts visualization
-   - Failure pattern explorer, research summary, and result export
+## Tech Stack
 
-## Deterministic parser
-
-The parser is implemented in `src/parser.ts`. It uses an intentionally narrow grammar and never sends source code to an API. Statements outside the supported grammar are preserved as unsupported findings and become explicit TODOs in the generated draft.
-
-## Scope and safety
-
-All programs, poses, results, and effort estimates are synthetic. The prototype does not connect to hardware, perform safety validation, certify behavior, or produce a production migration.
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Recharts
+- Lucide React
+- Cloudflare Pages
+- Wrangler
